@@ -34,6 +34,17 @@ def isFull():
           return True
      else:
           return False
+
+
+if size!=5:
+ for i in range(0,5):
+     if queue[i]=="":
+          rear=rear-1
+          front=front-1
+
+
+
+
 # checking if queue is full
 def isEmpty():
      if size==0:
