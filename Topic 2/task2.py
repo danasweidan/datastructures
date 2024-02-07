@@ -28,22 +28,22 @@ def dequeue():
 
 ##### THIS NOT WORKING ########
 # checking if queue is full
+#
 def isFull():
      if size==5:
           print("Error: queue is full")
           return True
+     
      else:
           return False
 
 
 if size!=5:
- for i in range(0,5):
-     if queue[i]=="":
-          rear=rear-1
-          front=front-1
-
-
-
+     for i in range(0,5):
+          if queue[i]=="":
+              rear=rear-1
+              front=front-1
+             
 
 # checking if queue is full
 def isEmpty():
@@ -80,6 +80,13 @@ print("q", queue)
 
 enqueue("G")
 print("q", queue)
+
+dequeue()
+print("q", queue)
+
+enqueue("H")
+print("q", queue)
+
 
 print(queue)
 #here
