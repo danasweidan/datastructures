@@ -11,52 +11,52 @@ linkedList= [
    ]
 #print(linkedList[head])
 
-#checking if the list is empty
-'''
-def isEmpty():
-    if head == None:
-        print("List is empty")
-
-#adding to the end of the list
-'''
-'''
-
-def addEnd(data):
-    global current, pointer, linkedList
-    while current!=None:
-        pointer=pointer+1
-        current=pointer
-    linkedList.append[[data][current]]
-    print(current)
-addEnd("dana")
-print(linkedList)
-
-'''
-
 #checks if list is empty
 def isEmpty():
  if (linkedList[head]==None):
         print("List is empty")
- else:
-      current = head
-      while current!= None:
-          print(linkedList[current][data])
-          current=linkedList[current][pointer]
+ else :
+     print("List is full")
+
+#traversing through the list
+def traverseList():
+     global current
+     if (linkedList[head]==None):
+        print("List is empty")
+     else:
+        current = head
+        while current!= None:
+         print(linkedList[current][data])
+         current=linkedList[current][pointer]
+
+#adding item to the list
+class Node(): 
+  def create_node (self, nameData):
+    self.data= nameData
+    self.next = None
+    
+  
+  def add(nameData):
+       global current, pointer, data
+     #check the list is empty
+       traverseList() #traverse through the list to find the empty space, (none/null)
+       new_node = Node(nameData)
+       if current.pointer==None: #finding an empty space
+        current.data=new_node
+        linkedList[pointer]=current.next
+        linkedList[pointer.next]=None
+        linkedList(new_node[current][None])
+ 
 
 
-def add():
-    global current, pointer, name
-    isEmpty()
-    current=linkedList[current][pointer]
-    pointer=current.pointer + 1
-    linkedList.append(name[current][pointer])
+nameData="dana"
+Node()
+create_node(Dana)
+add(nameData)
 
-add()
-name="dana"
+
 print(linkedList)
 
-
-#adding an item to the end of the list      
 
 
 
