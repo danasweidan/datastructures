@@ -12,7 +12,7 @@ class Node():
     def get_next(self):   #retrieveing the pointer
         return self.next
     
-    def self_next(self, new_text):
+    def set_next(self, new_text):
         self.next=new_text
 
     def output_node(self):
@@ -38,8 +38,10 @@ class Stack():
     def push(self,data):
         new_node=Node(data)
         if not self.is_empty():  #check if list is empty
-            new_node.get_next(self.top)  #point to next element in list
+            new_node.set_next(self.top)  #point to next element in list
+        
         self.top=new_node  #set top to point to the new node
+            
 
     def pop(self):
        
@@ -56,7 +58,7 @@ class Stack():
         if self.top !=None:
             print("---- State of the stack (first item is the top) ----")
             current_node=self.top
-            curent_node= self.top
+            curent_node.output_node()
             while current_node.get_next() != None:
                 curent_node=current_node.get_next()
                 current_node.output_node()
@@ -69,40 +71,42 @@ def main():
     my_stack= Stack()
        
     my_stack.push("Dana") #test data
-    my_stack.output_stack()
-
-    my_stack.push("Anna")
-    my_stack.output_stack()
-
-    my_stack.push("Rey")
-    my_stack.output_stack()
+    # my_stack.output_stack()
+    print(my_stack.top.data)
     
-    popped_item=my_stack.pop()
-    print(f"Popped {popped_item}")
-    my_stack.output_stack()
+    my_stack.push("Anna") #test data
+    # my_stack.output_stack()
+    print(my_stack.top.data)
+    # my_stack.push("Anna")
+    # my_stack.output_stack()
 
-    my_stack.push("Sabrina")
-    my_stack().output_stack()
+    # my_stack.push("Rey")
+    # my_stack.output_stack()
+    
+    # popped_item=my_stack.pop()
+    # print(f"Popped {popped_item}")
+    # my_stack.output_stack()
 
-    if __name__=='__main__':
-        main()
+    # my_stack.push("Sabrina")
+    # my_stack().output_stack()
+
+
  
 
-    def test_my_stack():  #testing the stack
-     my_stack = Stack()
-     my_stack.push("carrots")
-     my_stack.push("turnips")
+    # def test_my_stack():  #testing the stack
+    #  my_stack = Stack()
+    #  my_stack.push("carrots")
+    #  my_stack.push("turnips")
 
-     peeked_element = my_stack.peek()
-     print(peeked_element)
+    #  peeked_element = my_stack.peek()
+    #  print(peeked_element)
 
-     popped_element = my_stack.pop()
-     print(popped_element)
-
-
+    #  popped_element = my_stack.pop()
+    #  print(popped_element)
 
 
-main()
+if __name__=='__main__':
+    main()        
 
 
 
